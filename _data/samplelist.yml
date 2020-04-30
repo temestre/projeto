@@ -1,8 +1,8 @@
 docs_list_title: ""
 docs:
 
-- title: Home
-  url: index.markdown
+- title: About
+  url: about.html
 
 - title: Bio
   url: bio.html
