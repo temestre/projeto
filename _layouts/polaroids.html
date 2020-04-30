@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h2>Polaroids</h2>
+
+<nav>
+	<ul>
+   		{% for polaroids in site.work_polaroids %}
+      		<li><a href="{{polaroids.slug}}">{{ polaroids.title }}</a></li>
+   		{% endfor %}
+	</ul>
+</nav>
