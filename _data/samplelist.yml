@@ -2,7 +2,7 @@ docs_list_title: ""
 docs:
 
 - title: Home
-  url: index.html
+  url: index.markdown
 
 - title: Bio
   url: bio.html
