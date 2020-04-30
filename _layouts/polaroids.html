@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
+
 <h2>Polaroids</h2>
 
 <nav>
 	<ul>
-   		{% for polaroids in site.work_polaroids %}
-      		<li><a href="{{polaroids.slug}}">{{ polaroids.title }}</a></li>
+   		{% for polaroids in site.polaroids %}
+      		<li><a href="{{polaroids.folder }}" class="{% if polaroids.url contains polaroids.folder %}current{% endif %}">{{ polaroids.title }}</a></li>
    		{% endfor %}
 	</ul>
 </nav>
