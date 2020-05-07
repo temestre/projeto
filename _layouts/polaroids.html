@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 <h2>Polaroids</h2>
@@ -7,7 +7,9 @@ layout: default
 <nav>
 	<ul>
    		{% for polaroids in site.polaroids %}
-      		<li><a href="{{polaroids.folder }}" class="{% if polaroids.url contains polaroids.folder %}current{% endif %}">{{ polaroids.title }}</a></li>
+      		<li><a href="{{site.baseurl}}/polaroids/{{polaroids.slug}}/" class="{% if page.url contains polaroids.slug %}current{% endif %}">{{polaroids.title}}</a></li>
    		{% endfor %}
 	</ul>
 </nav>
+
+{{content}}
