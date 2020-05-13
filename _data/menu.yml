@@ -1,10 +1,10 @@
 docs_list_title: ""
 docs:
 
-- title: About
-  url: about.html
+- title: Homepage
+  url: home.html
 
-- title: Bio
+- title: Biography
   url: bio.html
 
 - title: Portfolio
