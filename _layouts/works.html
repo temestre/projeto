@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h2>Portfolio</h2>
+
+<nav>
+	<ul>
+   		{% for work in site.works %}
+      		<li><a href="{{site.baseurl}}/works/{{work.slug}}/" class="{% if page.url contains works.slug %}current{% endif %}">{{works.title}}</a></li>
+   		{% endfor %}
+	</ul>
+</nav>
+
+{{content}}

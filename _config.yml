@@ -18,12 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Uma mixórdia de temáticas
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Teresa Mestre
+email: te.mestre@gmail.com
+description: Get to know a bit more about me and my portfolio by navigating thought this simple yet very difficult to setup website. There's only so much you can learn from Jekyll in a couple of weeks while sitting on your sofa during COVID-19's quarentine. Hope you enjoy it.
+
+#>- # this means to ignore newlines until "baseurl:"
+  #Write an awesome description for your new site here. You can edit this
+  #line in _config.yml. It will appear in your document head meta (for
+  #Google search results) and in your feed.xml site description. 
 baseurl: "/projeto" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -34,9 +36,9 @@ theme: minima
 plugins:
   - jekyll-feed
 collections:
-  polaroids:
+  works:
     output: true
-    permalink: /polaroids/:path/
+    permalink: /works/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

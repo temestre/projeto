@@ -1,15 +1,18 @@
-<h1>Teresa Mestre</h1>
-
 <h2>{{ site.data.menu.docs_list_title }}</h2>
+
 <ul>
-   {% for item in site.data.menu.docs %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-   {% endfor %}
+   
+	{% for item in site.data.menu.docs %}
+    	
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   	
+   	{% endfor %}
+
 </ul>
 
-<h2>{{ site.data.social.docs_list_title }}</h2>
-<ul>
-   {% for item in site.data.social.docs %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-   {% endfor %}
-</ul>
+<div class="social">
+
+   {%- include icon-lin.html -%}
+   {%- include icon-insta.html -%}
+
+</div>
