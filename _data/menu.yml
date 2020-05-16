@@ -1,8 +1,8 @@
 docs_list_title: ""
 docs:
 
-- title: Biography
-  url: bio.html
+- title: About me
+  url: about.html
 
 - title: Portfolio
   url: portfolio.html

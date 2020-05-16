@@ -1,13 +1,14 @@
 <footer>
 
-  <nav class="menu-footer">
+<ul>
+   
+  {% for item in site.data.menu.docs %}
+      
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    
+    {% endfor %}
 
-    <a href="">Home</a>
-    <a href="">Biography</a>
-    <a href="">Work</a>
-    <a href="">Contacts</a>
-
-  </nav> <!-- https://www.w3schools.com/TAGs/tag_nav.asp -->
+</ul>
 
   <p> follow me </p>
 

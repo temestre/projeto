@@ -4,12 +4,30 @@ layout: default
 
 <h2>Portfolio</h2>
 
-<nav>
-	<ul>
-   		{% for work in site.works %}
-      		<li><a href="{{site.baseurl}}/works/{{work.slug}}/" class="{% if page.url contains works.slug %}current{% endif %}">{{works.title}}</a></li>
-   		{% endfor %}
-	</ul>
-</nav>
+<ul class="work-gallery">
+  
+  {% for image in site.works %}
+    
+    <li>
+
+      <figure>
+      
+        <a href="{{ site.baseurl }}/works/{{ image.slug }}">
+      
+        <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
+
+        <div class="overlay">
+
+          <figcaption class="work-title">{{image.title}}</figcaption>
+
+        </div>
+      
+        </a>
+    
+    </li>
+  
+  {% endfor %}
+
+</ul>
 
 {{content}}
