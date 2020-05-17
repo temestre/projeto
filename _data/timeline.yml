@@ -1,30 +1,37 @@
 docs_list_title: ""
 docs:
 
-- title: Mobrand
-  date: 2020
+- name: Mobrand
+  position: Digital Produt Design Specialist
+  date: 2020-01-01 00:00:00 +1
   side: right
 
-- title: FBAUL
-  date: 2019
+- name: FBAUL
+  position: Digital Experience Design
+  date: 2019-01-01 00:00:00 +1
   side: left
 
-- title: Ana Roque Interiors
-  date: 2018
+- name: Ana Roque Interiors
+  position: Marketing Manager
+  date: 2018-01-01 00:00:00 +1
   side: right
 
-- title: FLAG
-  date: 2017
+- name: FLAG
+  position: SEO and Social Media Management
+  date: 2017-01-01 00:00:00 +1
   side: left
 
-- title: SANA Hotels
-  date: 2016
+- name: SANA Hotels
+  position: Digital Marketing Manager
+  date: 2016-01-01 00:00:00 +1
   side: right
 
-- title: Wall Street English
-  date: 2014
+- name: Wall Street English
+  position: Graphic Designer
+  date: 2012-01-01 00:00:00 +1
   side: right
 
-- title: IADE
-  date: 2010
+- name: IADE
+  position: Graphic Design
+  date: 2010-01-01 00:00:00 +1
   side: left

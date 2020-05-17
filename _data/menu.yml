@@ -2,10 +2,10 @@ docs_list_title: ""
 docs:
 
 - title: About me
-  url: about.html
+  url: about
 
 - title: Portfolio
-  url: portfolio.html
+  url: portfolio
 
 - title: Contacts
-  url: contacts.html
+  url: contacts

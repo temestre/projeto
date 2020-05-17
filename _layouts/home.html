@@ -2,72 +2,44 @@
 layout: default
 ---
 
-		<section class="quote">
+<section class="quote">
 
-			<p class="quote">This web page is either the example of total quarentine coding success and that I have the tiniest chance of succeed in the world of front-end development, OR, that I should dedicate my time to knitting.</p>
+  <p class="quote">This web page is either the example of total quarentine coding success and that I have the tiniest chance of succeed in the world of front-end development, OR, that I should dedicate my time to knitting.</p>
 
-			<button>
+  <button>
 
-<a href="/projeto/about.html">About me</a>
+    <a href="/projeto/about">About me</a>
 
-      </button>
+  </button>
 
-		</section>
+<ul class="work-gallery">
+  
+  {% for image in site.works %}
+    
+    <li>
 
-		<section class="works_preview">
+      <figure>
+      
+        <a href="{{ site.baseurl }}/works/{{ image.slug }}">
+      
+        <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
 
-			<h2 class="section-title">Works</h2>
+        <div class="overlay">
 
-			<article class="container1">  <!-- https://www.w3schools.com/tags/tag_article.asp // https://www.w3schools.com/howto/howto_css_image_overlay.asp-->
+          <figcaption class="work-title">{{image.title}}</figcaption>
 
-          <figure>
+        </div>
+      
+        </a>
+    
+    </li>
+  
+  {% endfor %}
 
-  				  <img src="link / caminho da imagem" alt="nome do trabalho" style="width:100%" class="work-img">
-  			
-  					<div class="overlay">
+</ul>
 
-    					<figcaption class="work-title">Hello World</h3>
+<button>
 
-  					</div>
+  <a href="/projeto/portfolio">All work</a>
 
-          </figure>
-
-			</article>
-
-			<article class="container2">
-
-  				<figure>
-
-            <img src="link / caminho da imagem" alt="nome do trabalho" style="width:100%" class="work-img">
-        
-            <div class="overlay">
-
-              <figcaption class="work-title">Hello World</h3>
-
-            </div>
-
-          </figure>
-
-			</article>
-
-			<article class="container3">
-
-  				<figure>
-
-            <img src="link / caminho da imagem" alt="nome do trabalho" style="width:100%" class="work-img">
-        
-            <div class="overlay">
-
-              <figcaption class="work-title">Hello World</h3>
-
-            </div>
-
-          </figure>
-
-			</article>
-
-			<button>
-
-<a href="/projeto/portfolio.html">All work</a>
-
-      </button>
+</button>
