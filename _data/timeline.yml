@@ -2,36 +2,43 @@ docs_list_title: ""
 docs:
 
 - name: Mobrand
-  position: Digital Produt Design Specialist
-  date: 2020-01-01 00:00:00 +1
+  title: "Digital Produt Design Specialist"
+  description: "At Mobrand I integrated mainly the Development Team but still I do a bit more than just Digital Design. I also do Graphic Design and support the Marketing Department on the strategy, social media and community management."
+  date: 2020
   side: right
 
 - name: FBAUL
-  position: Digital Experience Design
-  date: 2019-01-01 00:00:00 +1
+  title: "Digital Experience Design"
+  description: "Having the possibility to enter this post-grad was really important professionaly since I was able to gain some knowledge in the another Design field and also change jobs."
+  date: 2019
   side: left
 
 - name: Ana Roque Interiors
-  position: Marketing Manager
-  date: 2018-01-01 00:00:00 +1
+  title: "Marketing Manager"
+  description: "A great responsability in a very specific industry where I aimed to communicate with high-end customers willing to buy luxury portuguese furniture."
+  date: 2018
   side: right
 
 - name: FLAG
-  position: SEO and Social Media Management
-  date: 2017-01-01 00:00:00 +1
+  title: "SEO and Social Media Management"
+  description: "A couple of courses important increase my knowlegde in Digital Marketing, allowing me to embrace a new project in the field."
+  date: 2017
   side: left
 
 - name: SANA Hotels
-  position: Digital Marketing Manager
-  date: 2016-01-01 00:00:00 +1
+  title: "Digital Marketing Manager"
+  description: "Here I had the opportunity to work at an events company, do a bit of Graphic Design and I also got to be responsible to manage the social media accounts of a great project called SUD Lisboa."
+  date: 2016
   side: right
 
 - name: Wall Street English
-  position: Graphic Designer
-  date: 2012-01-01 00:00:00 +1
+  title: "Graphic Designer"
+  description: "The begining of my professional adventure in the Design World. WSE was my first challenge where I was responsible for the whole rebranding on the Iberian market."
+  date: 2012
   side: right
 
 - name: IADE
-  position: Graphic Design
-  date: 2010-01-01 00:00:00 +1
+  title: Graphic Design
+  description: "IADE taught me a lot but maily it taught me to find my way, making me understand what I wanted in the world of Design and working to get it."
+  date: 2010
   side: left

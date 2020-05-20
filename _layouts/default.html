@@ -11,6 +11,12 @@
 
       <div class="wrapper">
 
+        {% if page.banner %}
+
+          {%- include slideshow.html -%}
+
+        {% endif %}
+
         {{ content }}
 
       </div>

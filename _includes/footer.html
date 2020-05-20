@@ -1,24 +1,15 @@
 <footer>
 
-<ul>
-   
-  {% for item in site.data.menu.docs %}
-      
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	<div class="social">
+	
+		<p> Follow me </p>
+
+    	{%- include icon-lin.html -%}
     
-    {% endfor %}
+    	{%- include icon-insta.html -%}
 
-</ul>
+	</div>
 
-  <p> follow me </p>
-
-  <div class="social">
-
-    {%- include icon-lin.html -%}
-    {%- include icon-insta.html -%}
-
-  </div>
-
-  <p> @ Copywrite 2020 </p>
+	<p> @temestre 2020 </p>
 
 </footer>

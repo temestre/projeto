@@ -4,30 +4,28 @@ layout: default
 
 <h2>Portfolio</h2>
 
-<ul class="work-gallery">
+<section class="work-gallery">
   
   {% for image in site.works %}
-    
-    <li>
 
-      <figure>
+    <figure>
       
-        <a href="{{ site.baseurl }}/works/{{ image.slug }}">
+      <a href="{{ site.baseurl }}/works/{{ image.slug }}">
       
-        <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
+      <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
 
-        <div class="overlay">
+      <div class="overlay">
 
-          <figcaption class="work-title">{{image.title}}</figcaption>
+        <figcaption class="work-title">{{image.title}}</figcaption>
 
-        </div>
+      </div>
       
-        </a>
-    
-    </li>
+      </a>
+
+    </figure>
   
   {% endfor %}
 
-</ul>
+</section>
 
 {{content}}
