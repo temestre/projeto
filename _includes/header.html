@@ -7,16 +7,24 @@
 
     {%- if page_paths -%}
     
-    <nav class"navbar">
+    <div id="topbar">
 
-      {% include nav.html %}
+        <nav class="navbar">
+
+
+            {% include nav.html %}
+
+      
+        </nav>
+
+        {%- endif -%}
+
+        <div class="social">
+
+            {%- include mysocial.html -%}
+
+        </div>
 
     </div>
-
-      {%- include mysocial.html -%}
-      
-    </nav>
-    
-    {%- endif -%}
 
 </header>

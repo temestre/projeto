@@ -1,8 +1,10 @@
 ---
 ---
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
+    width: 320px;
 }
 
 body {
@@ -11,15 +13,199 @@ body {
   	font-family: 'Montserrat', sans-serif;
 }
 
+.content {
+  width: 320px;
+}
+
+header {
+  display:flex;
+  width: 100%;
+  background: #edeffa;
+  color: #360C68;
+  font-size: 20px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* slideshow */   
+
+  .slideshow-container {    
+   width: 320px;    
+   position: relative;    
+   margin: 0 auto;
+   top: 0;  
+ }    
+
+  .slideshow-container .img-slideshow {   
+   width: 320px;    
+   height: auto;    
+   object-fit: cover;   
+   position: absolute;    
+   animation: animafade 30s infinite;   
+   opacity: 0;    
+ }    
+
+  @keyframes animafade {    
+   25% {    
+     opacity: 1;    
+   }    
+   40% {    
+     opacity: 0;    
+   }    
+ }    
+
+  .slideshow-container img:nth-child(7) {   
+   animation-delay: 0s;   
+ }    
+ .slideshow-container img:nth-child(6) {    
+   animation-delay: 5s;   
+ }    
+ .slideshow-container img:nth-child(5) {    
+   animation-delay: 10s;    
+ }    
+ .slideshow-container img:nth-child(4) {    
+   animation-delay: 15s;    
+ }    
+ .slideshow-container img:nth-child(3) {    
+   animation-delay: 20s;    
+ }    
+ .slideshow-container img:nth-child(2) {    
+   animation-delay: 25s;    
+ }    
+ .slideshow-container img:nth-child(1) {    
+   animation-delay: 30s;    
+ }
+
+/* END slideshow */  
+
+/* .content {
+  position: relative;
+  top: 200px;
+}*/
 
 
+/* Portfolio slider */
+
+.work-gallery {
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+}
+
+.slider-image {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+}
 
 
+/* END Portfolio slider */
+
+/* Footer */
+
+footer{
+  width: 100%;
+  bottom: 0;
+  background-color: #edeffa;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+footer div {
+  margin-bottom: 2rem;
+}
 
 
+/* END Footer */
 
 
+button {
+  padding: 0.5rem 1rem;
+}
 
+
+.about-me {
+  display: none;
+}
+
+
+.footer-about {
+    display: none;
+}
+
+
+/* Timeline About page */
+
+
+.timeline-title {
+  display: none;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 250px;
+  margin: 1rem;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 0.1875rem;
+  background-color: purple;
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 4px solid purple;
+  top: 50px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 0;
+}
+
+/* The actual content */
+.content {
+  width: 100%;
+  position: relative;
+}
 
 
 
