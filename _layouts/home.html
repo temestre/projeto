@@ -2,7 +2,7 @@
 layout: default
 banner: slideshow
 ---
-        {%- include slideshow.html -%}  
+{%- include slideshow.html -%}  
 
 <section class="quote">
 
@@ -14,15 +14,18 @@ banner: slideshow
 
   </button>
 
+
+<h2>Portfolio</h2>
+
 <section class="work-gallery">
   
   {% for image in site.works limit:3 %}
 
-    <figure>
+    <figure class="slider">
       
       <a href="{{ site.baseurl }}/works/{{ image.slug }}">
       
-      <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
+      <img class="slider-image" src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
 
       <div class="overlay">
 

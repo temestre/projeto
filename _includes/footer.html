@@ -1,15 +1,58 @@
-<footer>
+<footer class="footer-distributed">
 
-	<div class="social">
-	
-		<p> Follow me </p>
+	<div class="footer-left">
 
-    	{%- include icon-lin.html -%}
-    
-    	{%- include icon-insta.html -%}
+		<a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+		<nav class="site-nav">
+
+			{% include nav.html %}
+
+		</nav>
+
+		<p class="copywrite"> temestre @ 2020 </p>
+
+	<div class"footer-center">
+
+		<div class="location">
+
+			<span class="fas fa-map-marker-alt"></span>
+
+			<p>Lisbon, Portugal</p>
+
+		</div>
+
+		<div class="phone">
+
+			<span class="fas fa-mobile-alt"></span>
+
+			<p>+351 912 461 224</p>
+
+		</div>
+
+		<div class="email">
+
+			<span class="far fa-envelope"></span>
+
+			<p><a href="mailto:te.mestre@gmail.com">te.mestre@gmail.com</a></p>
+
+		</div>
+
+	<div class="footer-right">
+
+		<h3 class="footer-about">About me</h3>
+
+		<p>Wanna know more? You're sure? Ok then! So follow me at</p>
+
+		{%- include mysocial.html -%}
 
 	</div>
 
-	<p> @temestre 2020 </p>
-
 </footer>
+
+
+
+
+
+
+
