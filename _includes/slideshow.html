@@ -2,11 +2,11 @@
 
 	{% for image in site.static_files %}
 		
-		{% if image.path contains 'images/slideshow' %}
+	{% if image.path contains 'images/slideshow' %}
 			
-			<img class="img-slideshow" src="{{ site.baseurl }}{{ image.path }}" alt="Life slideshow">
+	<img class="img-slideshow" src="{{ site.baseurl }}{{ image.path }}" alt="Life slideshow">
 		
-		{% endif %}
+	{% endif %}
 	
 	{% endfor %}
 

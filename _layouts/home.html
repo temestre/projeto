@@ -13,6 +13,7 @@ banner: slideshow
 
   </button>
 
+</section>
 
 <h2>Portfolio</h2>
 
@@ -20,7 +21,7 @@ banner: slideshow
   
   {% for image in site.works limit:3 %}
 
-    <figure class="slider">
+  <figure class="slider">
       
       <a href="{{ site.baseurl }}/works/{{ image.slug }}">
       
@@ -36,8 +37,7 @@ banner: slideshow
 
     </figure>
   
-  {% endfor %}
-
+    {% endfor %}
 
 </section>
 
