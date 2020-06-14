@@ -16,12 +16,11 @@ body {
 }
 
 header {
-
+  padding: 1rem;
   display:flex;
   width: 100%;
   background: #edeffa;
   color: #360C68;
-  font-size: 20px;
   flex-direction: row;
   align-items: flex-start;
 }
@@ -30,8 +29,40 @@ a {
   text-decoration: none;
 }
 
+a:active {
+  color: indigo;
+}
+
 ul {
     list-style-type: none;
+}
+
+h1, h2 {
+  text-align: center;
+    margin: auto;
+}
+
+svg {
+  fill: purple;
+}
+
+span {
+  fill: purple;
+}
+
+.section-title {
+  padding: 1rem 1rem;
+  font-size: 24px;
+}
+
+.copyright {
+  padding-top: 2rem;
+}
+
+/* slideshow */
+
+.slideshow-container {
+  display: none;
 }
 
 
@@ -59,10 +90,18 @@ ul {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
+  margin: 2rem 2rem 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);  
 }
 
-
 /* END Portfolio slider */
+
+
+.work-image {
+  width: 100%;
+}
+
 
 /* Footer */
 
@@ -85,12 +124,42 @@ footer div {
 
 
 button {
- background-color: white;
+ margin: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.primary-btn {
+   background-color: purple;
+ width: 50%;
+ color: white;
+ border: 0.0625rem solid purple;
+ border-radius: 0.25rem;
+ padding: 0.5rem 1rem;
+}
+
+.primary-btn:active {
+  background-color: indigo;
+  color: white;
+}
+
+.primary-btn a {
+  color: white;
+}
+
+.secondary-btn {
+   background-color: white;
  width: 50%;
  color: purple;
  border: 0.0625rem solid purple;
  border-radius: 0.25rem;
- margin: 2rem;
+ padding: 0.5rem 1rem;
+}
+
+.secondary-btn:active {
+  background-color: purple;
+  color: white;
 }
 
 
@@ -103,6 +172,48 @@ button {
     display: none;
 }
 
+
+
+/* Contact form */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+.contacts-social {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* END contact form */
 
 /* Timeline About page */
 
@@ -203,6 +314,10 @@ button {
   color: white;
   position: relative;
   border-radius: 6px;
+}
+
+.timeline-content h2 {
+  text-align: left;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */

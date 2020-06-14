@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<h2>Portfolio</h2>
+<h1 class="section-title">Portfolio</h1>
 
 <section class="work-gallery">
   
   {% for image in site.works %}
 
-    <figure>
+    <figure class="slider">
       
       <a href="{{ site.baseurl }}/works/{{ image.slug }}">
       
-      <img src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
+      <img class="slider-image" src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
 
       <div class="overlay">
 
