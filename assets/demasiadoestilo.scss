@@ -19,10 +19,13 @@ header {
   padding: 1rem;
   display:flex;
   width: 100%;
-  background: #edeffa;
   color: #360C68;
   flex-direction: row;
-  align-items: flex-start;
+  width: 100%;
+justify-content: space-evenly;
+align-items: baseline;
+        background: #edeffa;
+    color: purple;
 }
 
 a {
@@ -50,7 +53,149 @@ svg {
 
 span {
   fill: purple;
+padding-top: 0.5rem;
+/*font-size: 32px;*/
 }
+
+/* Hamburguer Menu */
+
+
+.navbar-container {
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    z-index: 3;
+    display: block;
+}
+
+header #navbar {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    display: flex;
+}
+
+#menu-toggle {
+    width: 100%;
+    top: 25px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menu-toggle a {
+    transition: color 0.3s ease;
+}
+
+#menu-toggle a:active {
+    -webkit-text-stroke: 0px;
+    -webkit-text-fill-color: #F9F9F8;
+    color: #F9F9F8;
+}
+
+#menu-toggle input {
+    width: 40px;
+    height: 32px;
+    top: -7px;
+    left: 15px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+}
+
+#menu-toggle span {
+    width: 46px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    background: purple;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+
+#menu-toggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menu-toggle input:checked ~ span {
+    opacity: 1;
+    background: purple;
+    transform: rotate(45deg) translate(-2px, -1px);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    width: 100%;
+    height: 70%;
+    margin: -130px 0 0 -40px;
+    padding-top: 100px;
+    position: absolute;
+    background-color: #edeffa;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 25px 0;
+    font-size: 26px;
+    -webkit-text-stroke: 1px;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu-toggle input:checked ~ ul {
+    transform: none;
+}
+
+/* END menu */  
+
+.social {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END menu */  
+
 
 .section-title {
   padding: 1rem 1rem;
@@ -71,7 +216,7 @@ span {
 /* END slideshow */  
 
 .content {
-  padding: 1rem;
+  padding: 5rem 0 0 0;
   position: relative;
 }
 
@@ -131,6 +276,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 1.5rem;
+  font-size: 1rem;
 }
 
 .primary-btn {
@@ -208,9 +354,13 @@ input[type=submit]:hover {
 
 
 .contacts-social {
-    display: block;
+    display: flex;
   margin-left: auto;
   margin-right: auto;
+padding: 2rem 0 2rem 0;
+width: 100%;
+justify-content: space-evenly;
+align-items: baseline;
 }
 
 
@@ -320,6 +470,15 @@ input[type=submit]:hover {
 .timeline-content h2 {
   text-align: left;
 }
+
+
+
+
+
+
+
+
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
