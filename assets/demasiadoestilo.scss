@@ -375,8 +375,17 @@ button {
 .work-gallery {
   width: auto;
   height: auto;
-  display: flex;
+  display: grid;
   overflow-x: auto;
+  grid-template-areas: 
+  'figure figure figure'
+  'figure figure figure'
+  'figure figure figure';
+  grid-gap: 20px;
+}
+
+.slider {
+    grid-area: figure figure figure;
 }
 
 .slider-image {
@@ -672,8 +681,6 @@ input[type=submit]:hover {
 #menu a:hover {
   color: indigo;
 }
-
-
 
 
   .contacts {
