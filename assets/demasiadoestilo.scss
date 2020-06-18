@@ -106,11 +106,11 @@ button {
   padding: 1rem 1.5rem;
   font-size: 1rem;
   font-weight: 800;
+    width: 150px;
 }
 
 .primary-btn {
   background-color: purple;
-  width: 50%;
   color: white;
   border: 0.125rem solid purple;
   border-radius: 0.25rem;
@@ -127,7 +127,6 @@ button {
 
 .secondary-btn {
   background-color: white;
-  width: 50%;
   color: purple;
   border: 0.125rem solid purple;
   border-radius: 0.25rem;
@@ -374,6 +373,9 @@ button {
   text-align: left;
 }
 
+.timeline-title {
+  display: none;
+}
 
 /* END ABOUT PAGE */
 
@@ -545,8 +547,26 @@ input[type=submit]:hover {
     margin: 5% 10% 0 10%;
 }
 
+  .about-me {
+  display: none;
+}
+
+  .timeline-title {
+  display: none;
+}
+
+.timeline p {
+  display: none;
+}
+
+.works-cards p {
+  display: none;
+}
 
 
+.slideshow-container {
+    display: none;
+  }
 
 
 
@@ -556,56 +576,11 @@ input[type=submit]:hover {
 
 @media screen and (min-width: 600px) {
 
-#menu {
-  display: initial;
-    position: unset;
-    left: unset;
-    top: unset;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    transform: unset;
-    height: 4.375rem;
-}
 
 
-#menu-toggle span.burger {
-  display: none;
-}
-
-#menu-toggle input {
-    display: none;
-  }
-
-  #menu li {
+.site-title {
   font-size: 1rem;
-  display: flex;
-  align-items: center;
 }
-
-
-  /* Style the links inside the navigation bar */
-#menu a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-#menu a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-#menu a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-
 
 
 
@@ -616,37 +591,6 @@ input[type=submit]:hover {
 .life-titles {
   display: none;
 }
-
-  .timeline::after {
-    left: 1.9375rem;
-  }
-
-
-
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 4.375rem;
-    padding-right: 1.5625rem;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 3.75rem;
-    border: medium solid purple;
-    border-width: 0.625rem 0.625rem 0.625rem 0;
-    border-color: transparent purple transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 0.9375rem;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
 
 
 
@@ -677,25 +621,89 @@ input[type=submit]:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
 }
 
 
 
 
+@media screen and (min-width: 720px) {
+#menu {
+  display: initial;
+    position: unset;
+    left: unset;
+    top: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: unset;
+    height: 4.375rem;
+    width: unset;
+}
+
+
+#menu-toggle span.burger {
+  display: none;
+}
+
+#menu-toggle input {
+    display: none;
+  }
+
+  #menu li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+
+  /* Style the links inside the navigation bar */
+#menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+#menu a:hover {
+  color: indigo;
+}
 
 
 
+.timeline::after {
+    left: 1.9375rem;
+  }
 
+
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 4.375rem;
+    padding-right: 1.5625rem;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 3.75rem;
+    border: medium solid purple;
+    border-width: 0.625rem 0.625rem 0.625rem 0;
+    border-color: transparent purple transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 0.9375rem;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+}
 
 
 
@@ -730,7 +738,6 @@ input[type=submit]:hover {
 }
 
 /*
-
 .work-gallery {
   max-width: 800px;
   height: auto;
@@ -738,22 +745,15 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
-
   .slider {
   position: relative;
   width: 50%;
 }
-
 .slider-image {
   display: block;
   width: 100%;
   height: auto;
 }
-
-
-
-
-
 .overlay {
   position: absolute;
   top: 0;
@@ -766,11 +766,9 @@ input[type=submit]:hover {
   transition: .5s ease;
   background-color: #5E1BAF;
 }
-
 .slider:hover .overlay {
   opacity: 1;
 }
-
 .work-title {
   color: white;
   font-size: 20px;
