@@ -181,6 +181,7 @@ button {
   opacity: 0;
   cursor: pointer;
   -webkit-touch-callout: none;
+  top: 0.6rem;
 }
 
 #menu-toggle span.burger {
@@ -370,7 +371,14 @@ button {
 /* END ABOUT PAGE */
 
 
+.work-gallery-home {
+  margin: 5% 10% 0 10%;
+}
 
+.work-gallery-home img {
+  width: 10rem;
+  height: 10rem;
+}
 
 .work-gallery {
   width: auto;
@@ -378,14 +386,35 @@ button {
   display: grid;
   overflow-x: auto;
   grid-template-areas: 
-  'figure figure figure'
-  'figure figure figure'
   'figure figure figure';
-  grid-gap: 20px;
+  grid-gap: 1rem;
+}
+
+.work-gallery-home img {
+  width: auto;
+  height: auto;
+  display: grid;
+  overflow-x: auto;
+  grid-template-areas: 
+  'figure figure figure';
+  grid-gap: 1rem;
+}
+
+.work-gallery img {
+  width: auto;
+  height: auto;
+  display: grid;
+  overflow-x: auto;
+  grid-template-areas: 
+  'figure figure figure';
+  grid-gap: 1rem;
 }
 
 .slider {
     grid-area: figure figure figure;
+        display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider-image {
@@ -395,7 +424,6 @@ button {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
-  margin: 2rem 2rem 1rem 0;
   border-radius: 1rem;
   box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);  
 }
@@ -604,7 +632,10 @@ input[type=submit]:hover {
     left: 0%;
   }
 
-
+.work-gallery img {
+  width: 10rem;
+  height: 100%;
+}
 
 
 @media screen and (min-width: 600px) {
@@ -632,6 +663,33 @@ input[type=submit]:hover {
 .timeline::after {
     left: none;
   }
+
+  .work-gallery {
+  margin: 5% 10% 0 10%;
+}
+
+.work-gallery img {
+  width: 15rem;
+  height: 100%;
+}
+
+.work-gallery {
+  width: auto;
+  height: auto;
+  display: grid;
+  overflow-x: auto;
+  grid-template-areas: 
+  'figure figure'
+    'figure figure'
+      'figure figure';
+  grid-gap: 1rem;
+}
+
+.work-gallery img {
+  width: 12rem;
+  height: 100%;
+}
+
 
 }
 
@@ -718,6 +776,20 @@ input[type=submit]:hover {
 .slideshow-container {
     display: inherit;
   }
+
+
+
+.work-gallery img {
+  width: 12rem;
+  height: 100%;
+}
+
+.work-gallery {
+  grid-template-areas: 
+  'figure figure figure'
+    'figure figure figure'
+      'figure figure figure';
+}
 
 
 
