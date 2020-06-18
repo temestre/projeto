@@ -140,6 +140,9 @@ button {
 
 /* END BUTTONS */
 
+.back-btn a {
+  color: red;
+}
 
 /* Hamburguer Menu */
 
@@ -742,7 +745,7 @@ input[type=submit]:hover {
 
 
   .contacts {
-        margin: 5% 50% 0 10%;
+        margin: 5% 20% 0 20%;
 }
 
 
@@ -791,7 +794,52 @@ input[type=submit]:hover {
       'figure figure figure';
 }
 
+  .contacts {
+        margin: 5% 30% 0 30%;
+}
 
+.work-gallery {
+  max-width: 800px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  .slider {
+  position: relative;
+  width: 50%;
+}
+.slider-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5E1BAF;
+}
+.slider:hover .overlay {
+  opacity: 1;
+}
+.work-title {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 }
 
