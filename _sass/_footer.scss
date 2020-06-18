@@ -1,0 +1,34 @@
+/* FOOTER */
+
+footer {
+  width: 100%;
+  bottom: 0;
+  background-color: #edeffa;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+footer div {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.copyright {
+  padding-top: 2rem;
+}
+
+/* for mobile */
+.footer-about {
+  display: none;
+}
+
+/* END FOOTER */
+
+
+@media screen and (min-width: 600px) {
+
+  .footer-about {
+    display: initial;
+  }
+}

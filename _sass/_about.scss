@@ -1,0 +1,197 @@
+/* ABOUT PAGE */
+
+.life-titles {
+  display: none;
+}
+
+.about-me {
+  display: none;
+}
+
+/* Timeline About page */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  background-color: $main-color;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.1875rem;
+}
+
+/* Container around content */
+.container {
+  padding: 0.625rem 3.125rem;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  right: -1.0625rem;
+  background-color: $bg-color;
+  border: 0.25rem solid $main-color;
+  top: 0.9375rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 1.375rem;
+  width: 0;
+  z-index: 1;
+  right: 1.875rem;
+  border: medium solid $main-color;
+  border-width: 0.625rem 0 0.625rem 0.625rem;
+  border-color: transparent transparent transparent $main-color;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 1.375rem;
+  width: 0;
+  z-index: 1;
+  left: 1.875rem;
+  border: medium solid $main-color;
+  border-width: 0.625rem 0.625rem 0.625rem 0;
+  border-color: transparent $main-color transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -1rem;
+}
+
+/* The actual content */
+.timeline-content {
+  width: 100%;
+  padding: 1.25rem 1.875rem;
+  background-color: $main-color;
+  color: $bg-color;
+  position: relative;
+  border-radius: 0.375rem;
+}
+
+.timeline-content h2 {
+  text-align: left;
+}
+
+.timeline-title {
+  display: none;
+}
+
+.timeline-title {
+  display: none;
+}
+
+.timeline p {
+  display: none;
+}
+
+.timeline::after {
+    left: 1.9375rem;
+}
+
+/* Full-width containers */
+.container {
+  width: 100%;
+  padding-left: 4.375rem;
+  padding-right: 1.5625rem;
+}
+
+/* Make sure that all arrows are pointing leftwards */
+.container::before {
+  left: 3.75rem;
+  border: medium solid $main-color;
+  border-width: 0.625rem 0.625rem 0.625rem 0;
+  border-color: transparent $main-color transparent transparent;
+}
+
+/* Make sure all circles are at the same spot */
+.left::after, .right::after {
+  left: 0.9375rem;
+}
+
+/* Make all right containers behave like the left ones */
+.right {
+  left: 0%;
+}
+
+/* END TIMELINE */
+
+/* END ABOUT PAGE */
+
+
+
+@media screen and (min-width: 600px) {
+
+  .site-title {
+    font-size: 1rem;
+  }
+
+  .life-titles {
+    display: flex;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  .timeline::after {
+    left: none;
+  }
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+  .about-me {
+    display: initial;
+  }
+
+  .timeline-title {
+    display: initial;
+  }
+
+  .timeline p {
+    display: initial;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

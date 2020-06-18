@@ -1,0 +1,187 @@
+/* WORKS PAGE */
+
+.work-image {
+  width: 100%;
+}
+
+.work-gallery {
+  width: auto;
+  height: auto;
+  display: grid;
+  overflow-x: auto;
+  grid-template-areas: 
+  'figure figure figure';
+  grid-gap: 1rem;
+}
+
+.work-gallery img {
+  width: auto;
+  height: auto;
+  display: grid;
+  overflow-x: auto;
+  grid-template-areas: 
+  'figure figure figure';
+  grid-gap: 1rem;
+}
+
+.slider {
+    grid-area: figure figure figure;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image {
+  width: 18.75rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  border-radius: 1rem;
+  box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);  
+}
+
+
+.work-image {
+  width: 100%;
+  margin: 2rem 0;
+  box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.works-cards {
+  margin: 5% 10% 0 10%;
+}
+
+.section-title {
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.works-cards p {
+  display: none;
+}
+
+.work-gallery img {
+  width: 10rem;
+  height: 100%;
+}
+
+.work-gallery img {
+  width: 10rem;
+  height: 100%;
+}
+
+
+/* END WORKS PAGE */
+
+
+
+
+@media screen and (min-width: 600px) {
+
+  .work-gallery {
+    margin: 5% 10% 0 10%;
+  }
+
+  .work-gallery img {
+    width: 15rem;
+    height: 100%;
+  }
+
+  .work-gallery {
+    width: auto;
+    height: auto;
+    display: grid;
+    overflow-x: auto;
+    grid-template-areas: 
+    'figure figure'
+    'figure figure'
+    'figure figure';
+    grid-gap: 1rem;
+  }
+
+  .work-gallery img {
+    width: 12rem;
+    height: 100%;
+  }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+  .works-cards p {
+    display: initial;
+  }
+
+
+  .work-gallery img {
+    width: 12rem;
+    height: 100%;
+  }
+
+  .work-gallery {
+    grid-template-areas: 
+    'figure figure figure'
+    'figure figure figure'
+    'figure figure figure';
+  }
+
+  .work-gallery {
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .slider {
+    position: relative;
+    width: 50%;
+  }
+
+  .slider-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5E1BAF;
+  }
+
+  .slider:hover .overlay {
+    opacity: 1;
+  }
+
+  .work-title {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
