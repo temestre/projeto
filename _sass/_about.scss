@@ -22,7 +22,7 @@
   background-color: $main-color;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 1.9375rem;
   margin-left: -0.1875rem;
 }
 
@@ -163,8 +163,24 @@
   }
 
   .timeline::after {
-    left: none;
+    left: 50%;
   }
+
+.right {
+    &:after {
+    left: -1rem;
+  }
+}
+
+  .left {
+    &:after {
+    left: unset;
+  }
+}
+
+  .container {
+  width: 50%;
+}
 }
 
 

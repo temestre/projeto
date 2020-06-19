@@ -33,21 +33,24 @@ header {
   color: purple;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:active {
-  color: indigo;
-}
-
-ul {
-  list-style-type: none;
-}
 
 h1, h2 {
   text-align: center;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+
+    &:active {
+      color: indigo;
+    }
+}
+
+
+
+ul {
+  list-style-type: none;
 }
 
 svg {
@@ -57,27 +60,27 @@ svg {
 span {
   fill: purple;
   padding-top: 0.5rem;
+
+    a {
+      font-size: 2rem;
+    }
+
+    &::before {
+      font-size: 2rem;
+    }
 }
 
-span a {
-  font-size: 2rem;
-}
+article p {
+  padding-top: 1rem;
 
-span::before {
-  font-size: 2rem;
+    .title {
+      padding-bottom: 1rem;
+    }
 }
 
 .content {
   padding: 6rem 1rem 0 1rem;
   position: relative;
-}
-
-article p {
-  padding-top: 1rem;
-}
-
-article .title {
-  padding-bottom: 1rem;
 }
 
 
@@ -326,15 +329,7 @@ button {
     width: unset;
   }
 
-  #menu-toggle span.burger {
-    display: none;
-  }
-
-  #menu-toggle input {
-    display: none;
-  }
-
-  #menu li {
+    #menu li {
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -354,6 +349,15 @@ button {
   #menu a:hover {
     color: indigo;
   }
+
+  #menu-toggle span.burger {
+    display: none;
+  }
+
+  #menu-toggle input {
+    display: none;
+  }
+
 }
 
 

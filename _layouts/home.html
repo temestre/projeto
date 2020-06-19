@@ -2,7 +2,7 @@
 layout: default
 ---
 
-   <h1 class="section-title">This is...</h1>
+<h1 class="section-title">This is...</h1>
 
 <section class="quote">
 
@@ -18,23 +18,21 @@ layout: default
 
 <h2 class="section-title">Portfolio</h2>
 
-<section class="work-gallery-home">
-
-<section class="work-gallery">
+  <section class="work-gallery">
   
-  {% for image in site.works limit:3 %}
+    {% for image in site.works limit:3 %}
 
-  <figure class="slider">
+    <figure class="slider">
       
       <a href="{{ site.baseurl }}/works/{{ image.slug }}">
       
-      <img class="slider-image" src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
+        <img class="slider-image" src="{{ site.baseurl }}/images/portfolio/{{ image.image }}" alt="{{ image.title }}"/>
 
-      <div class="overlay">
+        <div class="overlay">
 
-        <figcaption class="work-title">{{image.title}}</figcaption>
+          <figcaption class="work-title">{{image.title}}</figcaption>
 
-      </div>
+        </div>
       
       </a>
 
@@ -42,7 +40,7 @@ layout: default
   
     {% endfor %}
 
-</section>
+  </section>
 
 <button class="secondary-btn">
 
