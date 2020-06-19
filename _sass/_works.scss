@@ -10,8 +10,8 @@
 .work-image {
   width: 100%;
   margin: 2rem 0;
-  -webkit-box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.3125rem 0.3125rem 0 $shadow, 0 0.375rem 1.25rem 0 $shadow;
+          box-shadow: 0 0.3125rem 0.3125rem 0 $shadow, 0 0.375rem 1.25rem 0 $shadow;
 }
 
 .works-cards {

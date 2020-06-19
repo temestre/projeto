@@ -1,22 +1,17 @@
 /* HOME PAGE */
 
-.work-gallery-home {
+.work-gallery {
   margin: 5% 10% 0 10%;
-}
 
-.work-gallery-home img {
-  width: 10rem;
-  height: 10rem;
-}
-
-.work-gallery-home img {
-  width: auto;
-  height: auto;
-  display: grid;
-  overflow-x: auto;
-  grid-template-areas: 
-  'figure figure figure';
-  grid-gap: 1rem;
+    img {
+      width: 10rem;
+      height: 10rem;
+      display: grid;
+      overflow-x: auto;
+      grid-template-areas: 
+      'figure figure figure';
+      grid-gap: 1rem;
+    }
 }
 
 /* END HOME PAGE */

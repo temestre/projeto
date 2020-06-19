@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 /* FOOTER */
 
 footer {
@@ -7,11 +14,11 @@ footer {
   position: relative;
   display: block;
   text-align: center;
-}
 
-footer div {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+    div {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
 }
 
 .copyright {
