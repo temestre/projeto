@@ -1,4 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 /* GENERAL */
+
+@import "buttons";
 
 :root {
   font-size: 16px;
@@ -7,7 +16,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -16,19 +26,28 @@ html {
 
 body {
   background-color: $bg-color;
-  color: purple;
+  color: $main-color;
   font-family: 'Montserrat', sans-serif;
 }
 
 header {
   padding: 1rem;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   width: 100%;
   color: $main-color;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: $nav-color;
   color: purple;
 }
@@ -43,7 +62,7 @@ a {
   text-decoration: none;
 
     &:active {
-      color: indigo;
+      color: $main-color;
     }
 }
 
@@ -54,11 +73,11 @@ ul {
 }
 
 svg {
-  fill: purple;
+  fill: $main-color;
 }
 
 span {
-  fill: purple;
+  fill: $main-color;
   padding-top: 0.5rem;
 
     a {
@@ -92,42 +111,24 @@ article p {
 /* BUTTONS */
 
 button {
-  margin: 2rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 800;
-  width: 150px;
-}
+  @include button;
 
-.primary-btn {
-  background-color: $main-color;
-  color: $bg-color;
-  border: 0.125rem solid $main-color;
-  border-radius: 0.25rem;
-}
+    .primary-btn {
+      @include primary-btn;
 
-.primary-btn a {
-  color: $bg-color;
-}
+        a {
+          color: $bg-color;
+        }
 
-.primary-btn:active {
-  background-color: indigo;
-  color: $bg-color;
-}
+        &:active {
+          background-color: $main-color;
+          color: $bg-color;
+        }
+    }
 
-.secondary-btn {
-  background-color: $bg-color;
-  color: $main-color;
-  border: 0.125rem solid $main-color;
-  border-radius: 0.25rem;
-}
-
-.secondary-btn:active {
-  background-color: $main-color;
-  color: $bg-color;
+  .secondary-btn {
+    @include secondary-btn;
+  }
 }
 
 
@@ -142,18 +143,31 @@ button {
   position: relative;    
   top: 4.375rem;
   max-height: 30rem;
-  height: 40vw; /*tamanho do slideshow*/
+  height: 40vw; /*slideshow size*/
+
+    .img-slideshow {   
+      width: 100vw;    
+      height: 40vw; /*imagem size*/
+      max-height: 30rem;
+      -o-object-fit: cover;
+         object-fit: cover;   
+      position: absolute;    
+      -webkit-animation: animafade 30s infinite;    
+              animation: animafade 30s infinite;   
+      opacity: 0;    
+    }    
 }    
 
-.slideshow-container .img-slideshow {   
-  width: 100vw;    
-  height: 40vw; /*tamanho do imagem*/
-  max-height: 30rem;
-  object-fit: cover;   
-  position: absolute;    
-  animation: animafade 30s infinite;   
-  opacity: 0;    
+
+@-webkit-keyframes animafade {    
+  25% {    
+    opacity: 1;    
+  }    
+  40% {    
+    opacity: 0;    
+  }    
 }    
+
 
 @keyframes animafade {    
   25% {    
@@ -164,31 +178,30 @@ button {
   }    
 }    
 
-.slideshow-container img:nth-child(7) {   
-  animation-delay: 0s;   
-}    
-.slideshow-container img:nth-child(6) {    
-  animation-delay: 5s;   
-}    
-.slideshow-container img:nth-child(5) {    
-  animation-delay: 10s;    
-}    
-.slideshow-container img:nth-child(4) {    
-  animation-delay: 15s;    
-}    
-.slideshow-container img:nth-child(3) {    
-  animation-delay: 20s;    
-}    
-.slideshow-container img:nth-child(2) {    
-  animation-delay: 25s;    
-}    
-.slideshow-container img:nth-child(1) {    
-  animation-delay: 30s;    
-}
-
 .slideshow-container {
   display: none;
+
+    img {
+
+      &:nth-child(7) {-webkit-animation-delay: 0s;animation-delay: 0s;}    
+
+      &:nth-child(6) {-webkit-animation-delay: 5s;animation-delay: 5s;}  
+
+      &:nth-child(5) {-webkit-animation-delay: 10s;animation-delay: 10s;}  
+
+      &:nth-child(4) {-webkit-animation-delay: 15s;animation-delay: 15s;}  
+
+      &:nth-child(3) {-webkit-animation-delay: 20s;animation-delay: 20s;}  
+
+      &:nth-child(2) {-webkit-animation-delay: 25s;animation-delay: 25s;} 
+
+      &:nth-child(1) {-webkit-animation-delay: 30s;animation-delay: 30s;}  
+
+    }
 }
+
+
+
 
 /* END SLIDESHOW */
 
@@ -203,76 +216,6 @@ button {
   z-index: 3;
 }
 
-#menu-toggle {
-  width: 100%;
-  padding-left: 1.25rem;
-  z-index: 1;
-  display: block;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menu-toggle a {
-  transition: color 0.3s ease;
-}
-
-#menu-toggle a:active {
-  -webkit-text-stroke: 0;
-  -webkit-text-fill-color: #F9F9F8;
-  color: #F9F9F8;
-}
-
-#menu-toggle input {
-  width: 2.875rem;
-  height: 2.875rem;
-  top: -0.4375rem;
-  position: absolute;
-  z-index: 2;
-  display: block;
-  opacity: 0;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  top: 0.6rem;
-}
-
-#menu-toggle span.burger {
-  width: 2.875rem;
-  height: 0.25rem;
-  margin-bottom: 0.3125rem;
-  position: relative;
-  z-index: 1;
-  display: block;
-  background: $main-color;
-  border-radius: 0.1875rem;
-  transform-origin: 0.25rem 0;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
-}
-
-
-#menu-toggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menu-toggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-#menu-toggle input:checked ~ span {
-  opacity: 1;
-  background: $main-color;
-  transform: rotate(45deg) translate(-2px, -1px);
-}
-
-#menu-toggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menu-toggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
 #menu {
   width: 100vw;
   margin: 0;
@@ -283,30 +226,143 @@ button {
   background-color: $nav-color;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: 0.2, 0.05, 1, -webkit-transform 0.5s cubic-bezier 0.77;
+  transition: 0.2, 0.05, 1, -webkit-transform 0.5s cubic-bezier 0.77;
+  -o-transition: transform 0.5s cubic-bezier 0.77, 0.2, 0.05, 1;
   transition: transform 0.5s cubic-bezier 0.77, 0.2, 0.05, 1;
+  transition: transform 0.5s cubic-bezier 0.77, 0.2, 0.05, 1, -webkit-transform 0.5s cubic-bezier 0.77;
   display: none;
+
+    li {
+      padding: 1.5625rem 0;
+      font-size: 1.625rem;
+      -webkit-text-stroke: 0.0625rem;
+      list-style-type: none;
+      text-align: center;
+      padding-right: 2rem;
+    }
 }
 
-#menu li {
-  padding: 1.5625rem 0;
-  font-size: 1.625rem;
-  -webkit-text-stroke: 0.0625rem;
-  list-style-type: none;
-  text-align: center;
-  padding-right: 2rem;
+#menu-toggle {
+  width: 100%;
+  padding-left: 1.25rem;
+  z-index: 1;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+
+    a {
+      -webkit-transition: color 0.3s ease;
+      -o-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+
+      &:active {
+        -webkit-text-stroke: 0;
+        -webkit-text-fill-color: $light-grey;
+        color: $light-grey;
+      }
+    }
+
+    input {
+      width: 2.875rem;
+      height: 2.875rem;
+      top: -0.4375rem;
+      position: absolute;
+      z-index: 2;
+      display: block;
+      opacity: 0;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      top: 0.6rem;
+
+        &:checked ~ ul {
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          display: initial;
+        }
+    }
 }
 
-#menu-toggle input:checked ~ ul {
-  transform: none;
-  display: initial;
+
+
+
+#menu-toggle span.burger {
+  width: 2.875rem;
+  height: 0.25rem;
+  margin-bottom: 0.3125rem;
+  position: relative;
+  z-index: 1;
+  display: block;
+  background: $main-color;
+  border-radius: 0.1875rem;
+  -webkit-transform-origin: 0.25rem 0;
+      -ms-transform-origin: 0.25rem 0;
+          transform-origin: 0.25rem 0;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease,
+  -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease,
+  -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease,
+  -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+
+
+#menu-toggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+#menu-toggle input:checked ~ span {
+  opacity: 1;
+  background: $main-color;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+      -ms-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+
+    &:nth-last-child(2) {
+      -webkit-transform: rotate(-45deg) translate(0, -1px);
+          -ms-transform: rotate(-45deg) translate(0, -1px);
+              transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    &:nth-last-child(3) {
+      opacity: 0;
+      -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          -ms-transform: rotate(0deg) scale(0.2, 0.2);
+              transform: rotate(0deg) scale(0.2, 0.2);
+    }
+}
+
 
 .social {
   max-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 /* END BURGUER MENU */  
@@ -321,34 +377,46 @@ button {
     position: unset;
     left: unset;
     top: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    transform: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
     height: 4.375rem;
     width: unset;
+
+      li {
+        font-size: 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      /* Style the links inside the navigation bar */
+      a {
+        float: left;
+        text-align: center;
+        padding: 0.875rem 1rem;
+        text-decoration: none;
+        font-size: 1rem;
+
+          &:hover {
+            color: indigo;
+          }
+      }
   }
 
-    #menu li {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-  }
-
-
-  /* Style the links inside the navigation bar */
-  #menu a {
-    float: left;
-    text-align: center;
-    padding: 0.875rem 1rem;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
-  /* Change the color of links on hover */
-  #menu a:hover {
-    color: indigo;
-  }
 
   #menu-toggle span.burger {
     display: none;
@@ -357,7 +425,6 @@ button {
   #menu-toggle input {
     display: none;
   }
-
 }
 
 
@@ -368,8 +435,3 @@ button {
     display: inherit;
   }
 }
-
-
-
-
-

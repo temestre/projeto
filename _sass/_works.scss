@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 /* WORKS PAGE */
 
 .work-image {
   width: 100%;
   margin: 2rem 0;
-  box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .works-cards {
@@ -22,9 +30,10 @@
 .work-gallery {
   width: auto;
   height: auto;
+  display: -ms-grid;
   display: grid;
   overflow-x: auto;
-  grid-template-areas: 
+      grid-template-areas: 
   'figure figure figure figure figure figure figure figure figure';
   grid-gap: 1rem;
 
@@ -35,23 +44,30 @@
 }
 
 .slider {
-  grid-area: figure figure figure;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider-image {
   width: 18.75rem;
   height: 18.75rem;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
   scroll-snap-align: start;
   border-radius: 1rem;
-  box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);  
+  -webkit-box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3125rem 0.3125rem 0 rgba(0, 0, 0, 0.1), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.1);  
 }
-
 
 /* END WORKS PAGE */
 
@@ -67,38 +83,24 @@
   .work-gallery img {
     width: 12rem;
   }
-
 }
 
 
 @media screen and (min-width: 720px) {
 
   .work-gallery {
-    width: auto;
-    height: auto;
-    display: grid;
-    overflow-x: auto;
-    grid-template-areas: 
+        grid-template-areas: 
     'figure figure'
     'figure figure'
     'figure figure'
     'figure figure'
     'figure figure';
     grid-gap: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-    .work-gallery-home {
-    width: auto;
-    height: auto;
-    display: grid;
-    overflow-x: auto;
-    grid-template-areas: 
-    'figure figure figure';
-    grid-gap: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
 
@@ -118,7 +120,7 @@
 
   .work-title {
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -137,8 +139,10 @@
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
     transition: .5s ease;
-    background-color: #5E1BAF;
+    background-color: $main-color;
     border-radius: 1rem;
   }
 }
