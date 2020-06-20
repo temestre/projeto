@@ -17,6 +17,6 @@
 }
 
 @mixin secondary-btn {
-  background-color: &bg-sec-btn;
+  background-color: $bg-sec-btn;
   color: $main-color;
 }
